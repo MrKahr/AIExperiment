@@ -8,6 +8,15 @@ My goal is to come up with a list of requirements, as well as a test strategy to
 - I will mark all parts of the code written by an AI with [AI] and any code written by me as [MH]. This will ensure that AI-use is transparent.
 
 ## Resources
-This is where I should put links to important resources used in the this project
+[Harvard guide on prompting](https://www.huit.harvard.edu/news/ai-prompts)
 
-## Features completed 
+## Tasks completed
+- [] Initial setup and choice of testing framework
+- [] Find critical functions 
+- [] Testing strategy completed 
+- [] First 100 unit tests 
+- [] First 10 intregration tests 
+- [] First 3 end to end tests
+- [] First 3 regression tests
+- [] First 10 automated tests
+- [] Intial CD/CI pipeline
