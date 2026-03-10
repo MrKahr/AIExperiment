@@ -1,7 +1,12 @@
 Author: MH
 
 # Requirements
-Use the IEEE template
+Helpful guide from IEEE
+- Unambiguous – Open to only one interpretation
+- Complete – Nothing missing within project scope
+- Verifiable – Ability to test or demonstrate satisfaction
+- Consistent – No conflicts between requirements
+- Ranked – Clear relative importance and stability
 
 ## Functional requirements 
 - Application should provide navigational links between pages: landing page, events page, and about us page
