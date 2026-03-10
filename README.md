@@ -1,7 +1,7 @@
 # AIExperiment
 This repo is a cat and mouse game between me and an AI. \
 The goal of the AI is to write a simple web-based application for booking dungeons and dragons sessions.\
-My goal is to come up with a list of requirements, as well as a test strategy to find as many bugs as I can! 
+My goal is to come up with a list of requirements, as well as a test strategy and to properly write and test the system to find as many bugs as I can! 
 
 ## The rules for this project 
 - I cannot write any source code for the application; it should be completed by an AI. This will simulate me being handed some codebase to test from a developer team.
@@ -9,10 +9,13 @@ My goal is to come up with a list of requirements, as well as a test strategy to
 
 ## Resources
 [Harvard guide on prompting](https://www.huit.harvard.edu/news/ai-prompts)
+[IEEE guide to requirement specification](https://www.computer.org/resources/)software-requirements-specifications#requirements-fundamentals
+[Testability review paper1](https://dl.acm.org/doi/epdf/10.1145/2851613.2851978)
 
 ## Tasks completed
 - [] Initial setup and choice of testing framework
 - [] Find critical functions 
+- [] Find appropriate testing metrics
 - [] Testing strategy completed 
 - [] First 100 unit tests 
 - [] First 10 intregration tests 
