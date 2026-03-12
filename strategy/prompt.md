@@ -1,4 +1,4 @@
-Author: MH
+Author: [MH]
 
 # Context
 A volunteer organization hosting dungeons and dragons session want to create a web-based application to host their booking system. We will call them Dungeon Sessions (DS). DS' previous system was managed in google sheets, but they want something that will be more robust as they expect an influx of volunteers and members in the coming summer season. The DS' guild masters (volunteer leaders) do not have a technical background, but your future colleagues do. You should expect that DS sometimes provides uambigous feedback since it has a lot of different stakeholders volunteering their time for something that is their main hobby. This also means that they have many feature ideas and it is partly your job (along with your team), to push back on features that you do not think are possible. 
