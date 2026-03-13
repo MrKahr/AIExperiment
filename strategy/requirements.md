@@ -9,18 +9,20 @@ Author: [MH]
 
 # System description (IEEE)
 ## Introduction and Purpose
-The purpose of this web-based system is to link DnD sessions to attending members. The organization (DS) currently have no way to systematically determine which users attended which sessions - they currently rely on google sheet which is prone to human error. It is therefore impossible for the admins and hosts of a session to verify whether a member's player character is as powerful as they claim. This opens sessions to abuse, and users claim registering for sessions is currently cumbersome. 
+The purpose of this web-based system is to link DnD sessions to attending members. The organization (DS) currently have no way to systematically determine which users attended which sessions - they currently rely on google sheet which is prone to human error. It is therefore impossible for the admins and hosts of a session to verify whether a member's player character is as powerful as members claim. This opens sessions to abuse, and users claim registering for sessions is currently cumbersome. 
 
 ## Business Requirements
-
+- System must decrease member absence from sessions by at least 10%
+- System must comply with GDPR e.g. by ensuring inactive users are deleted after 6 months of inactivity 
+- System must ensure membership data statistics available as this is needed by DS to ensure funding
 
 ## Value Chain 
 I use the term "Value Chain" to refer to a business' core model of generate income. DS has the following value chain
 - Funding drive + Member recruitment drive -> Funding distribution -> Session hosting -> Membership maintainence
 
 ## User Personas or Roles
-- Admin: 
-- User:
+- Admin: A person who has access to data about users and can 
+- User: A person who is registered in the DS system. Some users may book or arrange sessions in the system.
 - Member: A person paying to be part of DS' activities who may or may not be a user of the booking system
 - Host: A person in charge of single sessions. This person is both a member and a user. 
 
@@ -28,18 +30,31 @@ I use the term "Value Chain" to refer to a business' core model of generate inco
 -  
 
 ## User Story or Use Cases
+Case 1: Hosting a session 
+
+Case 2: Updating your character 
+
+Case 3: 
+
 ## User Requirements
-## Functional Requirements
-## Nonfunctional Requirements
+
+# Functional Requirements
+
+# Nonfunctional Requirements
+
 ## Interface Requirements
+
 ## Performance Requirements
+
 ## Security Requirements
 
 ## Design and Implementation Constraints
-- System stack must consist of javascript, node and mySQL since resources are very limited at DS
-- 
-## External System Requirements
+- System stack must consist of javascript, node and mySQL since system maintainablility is important for DS. 
+## External system Requirements
+- System must be able to export data to common formats e.g. pdf, docx or excel
+
 ## Quality Assurance Requirements
+
 ## Documentation Requirements
 
 - Application should provide navigational links between pages: landing page, events page, and about us page
