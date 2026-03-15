@@ -26,17 +26,22 @@ I use the term "Value Chain" to refer to a business' core model of generate inco
 - Host: Uses the system to create sessions. This person is both a member and a user. 
 
 ## User Story or Use Cases
-Case 1: Hosting a session 
+### Case 1: Host 
+As a host, I want to plan interesting DnD sessions for fellow members such that
 
-Case 2: Updating your character 
+### Case 2: User + info 
+- As a user, I want to such that
 
+### Case 3: Admin 
 Case 3: Seeing member statistics
+- As an admin, I want to such that
 
 ## Feature List
 - User registration 
 - Statistics dashboard 
 - User dashboard 
 - Session booking 
+- Dice rolling 
 
 ## Business Requirements (BR)
 1. System shall manage hosted sessions
@@ -44,8 +49,9 @@ Case 3: Seeing member statistics
 3. System shall generate membership statistics (Required for DS funding)
 
 ## User Requirements (UR)
-- System must be able to export data to common formats e.g. pdf, docx or excel
-- System must be able to roll dice 
+- When export is selected, system shall give user option to export to formats pdf, docx or excel
+- When roll is selected, system shall open a window and show a dice rolling animation on user's screen
+- While system shows dice rolling animation on screen, system shall prohibit user from performing the roll operation
 
 # Functional Requirements (prefix: FR)
 2. System must comply with GDPR e.g. by ensuring inactive users are deleted after 6 months of inactivity 
@@ -62,7 +68,7 @@ Case 3: Seeing member statistics
 ## Security Requirements
 
 ## Design and Implementation Constraints
-- System stack must consist of typescript, node and mySQL since system maintainablility is important for DS.
+- System shall be implement with typescript, node and mySQL
 ## External system Requirements
 
 
