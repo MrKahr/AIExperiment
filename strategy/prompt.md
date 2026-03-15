@@ -11,7 +11,7 @@ Your goal is to write your source code in way that is readable and maintainable.
 You should consider the architecture of the application, but your must inform your tester of your choice, and you must consider it in all future interations. You are free to select any programming style e.g. function, or OOP, as long as you inform your team of your decision. You should know that your tester is open to questions and feedback, but that you should not expect him to fix bugs in your source code (although he may occasionally). If you choose to copy source code from anywhere, you should explicitly credit the authors. 
 
 # Your techstack
-Your stack has already been determined by DS. You should use javascript for the frontend, nodejs for the backend, and mySQL for the database component. You should not mix in any frameworks as this makes maintainablity much harder for DS.  
+Your stack has already been determined by DS. You should use typescript for the frontend, nodejs for the backend, and mySQL for the database component. You should not mix in any frameworks as this makes maintainablity much harder for DS.  
 
 # The current task
 Build this web-based application that satisfies the requirements provided by the tester. Do not create any sort of testing. This task will be performed by the tester. 

@@ -1,44 +1,57 @@
 Author: [MH]
 
-## Helpful guide from IEEE
+# Guide from IEEE
+Requirements shall be written such that they are: 
 - Unambiguous – Open to only one interpretation
 - Complete – Nothing missing within project scope
 - Verifiable – Ability to test or demonstrate satisfaction
 - Consistent – No conflicts between requirements
 - Ranked – Clear relative importance and stability
 
+# Writing requirement framework EARS
+- While <optional pre-condition>, when <optional trigger>, the <system name> shall <system response>
+
 # System description (IEEE)
 ## Introduction and Purpose
-The purpose of this web-based system is to link DnD sessions to attending members. The organization (DS) currently have no way to systematically determine which users attended which sessions - they currently rely on google sheet which is prone to human error. It is therefore impossible for the admins and hosts of a session to verify whether a member's player character is as powerful as members claim. This opens sessions to abuse, and users claim registering for sessions is currently cumbersome. 
-
-## Business Requirements
-- System must decrease member absence from sessions by at least 10%
-- System must comply with GDPR e.g. by ensuring inactive users are deleted after 6 months of inactivity 
-- System must ensure membership data statistics available as this is needed by DS to ensure funding
+The purpose of this web-based system is to link DnD sessions to attending members. The organization (DS) currently have no way to systematically determine which users attended which sessions - they currently rely on google sheet which is prone to human error. It is therefore impossible for the users to keep track of sessions they are attending, and hosts of a session cannot verify whether a member's player character is as powerful as members claim. This opens sessions to abuse, and users claim registering for sessions is currently cumbersome. 
 
 ## Value Chain 
 I use the term "Value Chain" to refer to a business' core model of generate income. DS has the following value chain
 - Funding drive + Member recruitment drive -> Funding distribution -> Session hosting -> Membership maintainence
 
 ## User Personas or Roles
-- Admin: A person who has access to data about users and can 
-- User: A person who is registered in the DS system. Some users may book or arrange sessions in the system.
-- Member: A person paying to be part of DS' activities who may or may not be a user of the booking system
-- Host: A person in charge of single sessions. This person is both a member and a user. 
-
-## Feature List
--  
+- Admin: Uses system to request data about users and updates user membership status
+- User: Uses system to sign up for sessions and track character progression. Users pay a membership fee. 
+- Member: May or may not use the system. A member pays a membership fee to part of DS' activities. 
+- Host: Uses the system to create sessions. This person is both a member and a user. 
 
 ## User Story or Use Cases
 Case 1: Hosting a session 
 
 Case 2: Updating your character 
 
-Case 3: 
+Case 3: Seeing member statistics
 
-## User Requirements
+## Feature List
+- User registration 
+- Statistics dashboard 
+- User dashboard 
+- Session booking 
 
-# Functional Requirements
+## Business Requirements (BR)
+1. System shall manage hosted sessions
+2. System shall generate session information to users
+3. System shall generate membership statistics (Required for DS funding)
+
+## User Requirements (UR)
+- System must be able to export data to common formats e.g. pdf, docx or excel
+- System must be able to roll dice 
+
+# Functional Requirements (prefix: FR)
+2. System must comply with GDPR e.g. by ensuring inactive users are deleted after 6 months of inactivity 
+
+## Funct
+## Data representation 
 
 # Nonfunctional Requirements
 
@@ -49,13 +62,14 @@ Case 3:
 ## Security Requirements
 
 ## Design and Implementation Constraints
-- System stack must consist of javascript, node and mySQL since system maintainablility is important for DS. 
+- System stack must consist of typescript, node and mySQL since system maintainablility is important for DS.
 ## External system Requirements
-- System must be able to export data to common formats e.g. pdf, docx or excel
+
 
 ## Quality Assurance Requirements
 
 ## Documentation Requirements
+- System functions, classes or object must be documented with at least the purpose of the code, and the meaning of any parameters or fields. 
 
 - Application should provide navigational links between pages: landing page, events page, and about us page
 - Application should not allow users to duplicate events or accounts 
@@ -80,3 +94,4 @@ Case 3:
 
 ### TODO: 
 - Create nice value chain picture [Value Chain section](#value-chain)
+- Reread system design book again for nice illustrations
