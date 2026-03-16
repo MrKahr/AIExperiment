@@ -27,21 +27,20 @@ I use the term "Value Chain" to refer to a business' core model of generate inco
 
 ## User Story or Use Cases
 ### Case 1: Host 
-As a host, I want to plan interesting DnD sessions for fellow members such that
+As a host, I want to create, plan and host interesting DnD sessions for fellow members such that 
 
 ### Case 2: User + info 
 - As a user, I want to such that
 
 ### Case 3: Admin 
-Case 3: Seeing member statistics
-- As an admin, I want to such that
+- As an admin, I want to keep track of  such that
 
 ## Feature List
-- User registration 
-- Statistics dashboard 
-- User dashboard 
-- Session booking 
-- Dice rolling 
+1. Session booking - Users create, and register for DnD sessions
+2. User registration - Users sign up to 
+3. Statistics dashboard - Admins see statistics of current members
+4. User dashboard - Users sees characters and sessions 
+5. Dice rolling - Users provided with dice rolling tool that shows animations
 
 ## Business Requirements (BR)
 1. System shall manage hosted sessions
@@ -49,14 +48,20 @@ Case 3: Seeing member statistics
 3. System shall generate membership statistics (Required for DS funding)
 
 ## User Requirements (UR)
-- When export is selected, system shall give user option to export to formats pdf, docx or excel
-- When roll is selected, system shall open a window and show a dice rolling animation on user's screen
-- While system shows dice rolling animation on screen, system shall prohibit user from performing the roll operation
+1. System shall allow user to register for system
+2. System shall allow user to create DnD session
+3. System shall allow user to register for DnD session
+4. System shall allow user to see other profiles in database
+5. When admin selects dashboard, system shall show open a window and show list of all members in database
+6. When user selects user dashboard, system shall show a window with user character information e.g. name, level, items, class, spells and abilities
+7. When user selects export operation, system shall give user option to export to formats pdf, docx or excel
+8. When roll is selected, system shall open a window and show a dice rolling animation on user's screen
+9. While system shows dice rolling animation on screen, system shall prohibit user from performing the roll operation
 
 # Functional Requirements (prefix: FR)
-2. System must comply with GDPR e.g. by ensuring inactive users are deleted after 6 months of inactivity 
+2. System shall comply with GDPR e.g. by deleting non-member profiles in database after 6 months 
 
-## Funct
+## 
 ## Data representation 
 
 # Nonfunctional Requirements
@@ -66,6 +71,7 @@ Case 3: Seeing member statistics
 ## Performance Requirements
 
 ## Security Requirements
+- System shall authenticate users 
 
 ## Design and Implementation Constraints
 - System shall be implement with typescript, node and mySQL

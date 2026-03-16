@@ -8,11 +8,11 @@ My goal is to come up with a list of requirements, as well as a test strategy an
 - I will mark all parts of the code or text written by an AI with [AI] and any code written by me as [MH]. This will ensure that AI-use is transparent.
 
 ## Resources
-[Harvard guide on prompting](https://www.huit.harvard.edu/news/ai-prompts)
-[IEEE guide to requirement specification](https://www.computer.org/resources/software-requirements-specifications?source=resources)software-requirements-specifications#requirements-fundamentals
-[Testability review paper1](https://dl.acm.org/doi/epdf/10.1145/2851613.2851978)
-[Formal testability paper](https://hal.science/hal-00852373v1/document)
-[EARS model of creating solid requirements](https://www.iaria.org/conferences2013/filesICCGI13/ICCGI_2013_Tutorial_Terzakis.pdf)
+- [Harvard guide on prompting](https://www.huit.harvard.edu/news/ai-prompts)
+- [IEEE guide to requirement specification](https://www.computer.org/resources/software-requirements-specifications?source=resources)software-requirements-specifications#requirements-fundamentals
+- [Testability review paper1](https://dl.acm.org/doi/epdf/10.1145/2851613.2851978)
+- [Formal testability paper](https://hal.science/hal-00852373v1/document)
+- [EARS model of creating formal requirements](https://www.iaria.org/conferences2013/filesICCGI13/ICCGI_2013_Tutorial_Terzakis.pdf)
 
 ## Tasks completed
 - [x] Create prompt for AI
