@@ -27,13 +27,13 @@ I use the term "Value Chain" to refer to a business' core model of generate inco
 
 ## User Story or Use Cases
 ### Case 1: Host 
-As a host, I want to create, plan and host interesting DnD sessions for fellow members such that 
+As a host, I want to create, plan and host interesting DnD sessions for fellow members. 
 
 ### Case 2: User + info 
-- As a user, I want to such that
+- As a user, I want see attend sessions that I find interesting, and see and update my character information to fell a sense of character progression. I also want to perform actions actions in DnD (roll dice). 
 
 ### Case 3: Admin 
-- As an admin, I want to keep track of  such that
+- As an admin, I want to keep track of members' statuses which I use for applying for funding, and to remove members from the union if they don't live up to our code of conduct. 
 
 ## Feature List
 1. Session booking - Users create, and register for DnD sessions
@@ -43,67 +43,85 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 5. Dice rolling - Users provided with dice rolling tool that shows animations
 
 ## Business Requirements (BR)
-1. System shall manage hosted sessions
-2. System shall generate session information to users
-3. System shall generate membership statistics (Required for DS funding)
+1. DS should manage hosted sessions
+2. DS should make session information to available to users
+3. DS should have access to membership statistics (Required for DS funding)
 
 ## User Requirements (UR)
-1. System shall allow user to register for system
-2. System shall allow user to create DnD session
-3. System shall allow user to register for DnD session
-4. System shall allow user to see other profiles in database
-5. When admin selects dashboard, system shall show open a window and show list of all members in database
-6. When user selects user dashboard, system shall show a window with user character information e.g. name, level, items, class, spells and abilities
-7. When user selects export operation, system shall give user option to export to formats pdf, docx or excel
-8. When roll is selected, system shall open a window and show a dice rolling animation on user's screen
-9. While system shows dice rolling animation on screen, system shall prohibit user from performing the roll operation
+1. Users should be able to register for system
+2. Users should be able to create DnD session in system
+3. Users should be able to register for DnD session
+4. Users should be able to see their registrations
+5. Users should be to see other users' mail and screen names
+6. Admin users should be able to see list of all members in database
+7. Users should be able to see their character information e.g. name, level, items, class, spells and abilities
+8. User should be able to export their data to formats pdf, docx or excel
+9. Users should be able to roll virtual dice
 
 # Functional Requirements (prefix: FR)
-2. System shall comply with GDPR e.g. by deleting non-member profiles in database after 6 months 
+## Interface requirements
+    - When an authenticated user "dashboard" is selected, System shall provide navigation options
+        - For users: 
+            - my profile
+            - my characters
+            - my sessions
+            - host session 
+        - For admins (addtionally)
+            - member info 
+    Each option shall open corresponding page. 
 
-## 
-## Data representation 
+- System shall provide navigational elements between pages:
+    - landing page
+    - events page
+    - about us page
+
+## Data and data representation 
+- When a duplicate account or event is created, the system shall 
+- When a user registers, system shall store the following information in database: joined date, screen name, age, branch, role, sessions booked, and characters associated with a player. 
+- Application should provide details on character associated with a player, including items, exp, name and level of each character
+
+## Security
+- When a user uses sign up operation, system shall assign lowest level access flag to that user. 
+- When system assigns and access flag, it shall assign the level of users, hosts, and admins. 
+- System shall assign its first user the flag of admin
+- System shall allow admin user to perform "change role" operation on active users.
+- System shall only provide admins with view of user name, membership status (active/inactive), date joined.
 
 # Nonfunctional Requirements
-
-## Interface Requirements
+## Interface Requirements 
+- At least 50% of users should rate "ease of use" criterion more than 3. (5 point scale).
 
 ## Performance Requirements
+- System database shall allow at least 10k records
+- System shall allow at least 1k user to be loggin in simultanously
+- System database schema shall have reduced redundancy (BCNF or 3NF forms if possible)
+- System shall not take more than 2 seconds to perform registration operation for new users
+- System uptime over a week shall be at least 95% 
 
-## Security Requirements
-- System shall authenticate users 
+## Security Requirements 
+- System shall authenticate users using an authentication algorithm 
+- Application should store user passwords using an encryption algorithm
+- System shall not allow admins to see other user passwords
+
+## Legal requirements
+- System shall comply with GDPR e.g. by deleting non-member profiles in database after 6 months
+- While a user has not ticked consent box, the system shall not perform the register operation
 
 ## Design and Implementation Constraints
-- System shall be implement with typescript, node and mySQL
-## External system Requirements
-
+- System shall be implemented with typescript, node and mySQL
 
 ## Quality Assurance Requirements
+- System shall be tested on all critical functions
+- System shall be tested using unit testing 
+- System shall be tested using integration testing 
+- System shall be tested using system testing 
+- System shall be tested using integration testing 
+- System shall be tested using automated testing
 
 ## Documentation Requirements
-- System functions, classes or object must be documented with at least the purpose of the code, and the meaning of any parameters or fields. 
-
-- Application should provide navigational links between pages: landing page, events page, and about us page
-- Application should not allow users to duplicate events or accounts 
-- Application should authenticate users using an authentication algorithm 
-- Application should provide admins with view of user details from database. This view should not be available to users and non-users. 
-- Application should provide differing levels of access to non-users, users, admins, and super admins
-- Application should only allow 4 members to have the role of superadmin at any time 
-- Application should only allow superadmins to promote admins, and superadmins can promote other superadmins only if there are less than 4 current superadmins. 
-- Application should allow admins to promote exactly one superadmin iff there are exactly 0 current superadmins
-- Application should contain the following information on users: joined date, screen name, age, branch, role, sessions booked, and characters associated with a player. 
-- Application should provide details on character associated with a player, including items, exp, name and level of each character
-- Application database should support at least 10k records
-- Application database schema should have reduced redundancy (BCNF or 3NF forms if possible)
--  Application should store user passwords safely (encrypted), but user data should be available to admins
-
-## Non-functional requirements
-- The application should support at least 10k users being logged in simultaneously
-- The application should not take longer than 2 seconds to register new users once "register" button is clicked
-- 50% of users should rate the intuitiveness of the UI at least a 4 (on a 5-point scale)
-- Application should obtain consent for keeping user data when users register
-- Application should not keep data longer than 5 months unless consent is given by users for explicit store (GDPR-compliance)
+- System shall provide documentation on critical functions
+- When system provides documentation on functions, classes or object, these must be documented with at least the purpose of the code, and the meaning of any parameters or fields. 
 
 ### TODO: 
 - Create nice value chain picture [Value Chain section](#value-chain)
-- Reread system design book again for nice illustrations
+- Use system design book to provide illustrations for system operations
