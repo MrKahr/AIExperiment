@@ -37,14 +37,14 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 
 ## Feature List
 1. Session booking - Users create, and register for DnD sessions
-2. User registration - Users sign up to 
-3. Statistics dashboard - Admins see statistics of current members
-4. User dashboard - Users sees characters and sessions 
-5. Dice rolling - Users provided with dice rolling tool that shows animations
+2. User registration - Users sign up to system with their details
+3. Statistics dashboard - Admins can see and administrate membership status of each user
+4. User dashboard - User have an overview of which sessions they are registered for and which characters they have used in sessions
+5. Dice rolling - Users provided with dice rolling tool that shows rolling animation
 
 ## Business Requirements (BR)
-1. DS should manage hosted sessions
-2. DS should make session information to available to users
+1. DS should be able to view, cancel and edit session details
+2. DS should make session information to available to users to register
 3. DS should have access to membership statistics (Required for DS funding)
 
 ## User Requirements (UR)
@@ -52,7 +52,7 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 2. Users should be able to create DnD session in system
 3. Users should be able to register for DnD session
 4. Users should be able to see their registrations
-5. Users should be to see other users' mail and screen names
+5. When two users are registerd for the same session, they should be to see other users' mail and screen names
 6. Admin users should be able to see list of all members in database
 7. Users should be able to see their character information e.g. name, level, items, class, spells and abilities
 8. User should be able to export their data to formats pdf, docx or excel
@@ -60,23 +60,39 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 
 # Functional Requirements (prefix: FR)
 ## Interface requirements
-    - When an authenticated user "dashboard" is selected, System shall provide navigation options
+    - When an authenticated user selects "my dashboard", system shall provide navigation options
         - For users: 
             - my profile
             - my characters
             - my sessions
-            - host session 
+            - host session
+            - dice roller 
         - For admins (addtionally)
             - member info 
     Each option shall open corresponding page. 
-
-- System shall provide navigational elements between pages:
+     - When an authenticated user selects "my sessions", system shall display
+        - list of sessions 
+        - time + date + location of session
+        - host user name 
+        in separate window
+    - When an authenticated user selects "my character", system shall display 
+        - character name 
+        - character level + xp
+        - character items 
+        - character gold 
+        - character portrait 
+- While an authenticated user is logged in, system shall provide navigational elements between pages:
     - landing page
     - events page
     - about us page
+    - my profile
+- When an authenticated user selects "dice roller", the system shall display options 
+    - dice type (d4,d6,d8,d12,d20,d100)
+    - dice amount (1-100)
+    - roll
 
 ## Data and data representation 
-- When a duplicate account or event is created, the system shall 
+- When an account or event is created that is identical to entity in database, the system shall perform "error" operation and user shall be provided with error window containing: "System error: cannot create entry, please enter new details" 
 - When a user registers, system shall store the following information in database: joined date, screen name, age, branch, role, sessions booked, and characters associated with a player. 
 - Application should provide details on character associated with a player, including items, exp, name and level of each character
 
@@ -89,7 +105,8 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 
 # Nonfunctional Requirements
 ## Interface Requirements 
-- At least 50% of users should rate "ease of use" criterion more than 3. (5 point scale).
+- System interface shall be rated more than 3 by 50% of user on "ease of use" scale (5 point scale).
+- System shall be accessible to colorblind users (e.g. by providing a colorblind mode)
 
 ## Performance Requirements
 - System database shall allow at least 10k records

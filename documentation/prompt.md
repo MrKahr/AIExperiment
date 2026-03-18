@@ -14,4 +14,4 @@ You should consider the architecture of the application, but your must inform yo
 Your stack has already been determined by DS. You should use typescript for the frontend, nodejs for the backend, and mySQL for the database component. You should not mix in any frameworks as this makes maintainablity much harder for DS.  
 
 # The current task
-Build this web-based application that satisfies the requirements provided by the tester. Do not create any sort of testing. This task will be performed by the tester. 
+Build this web-based application that satisfies the requirements provided by the tester. Do not create any sort of testing. This task will be performed by the tester. The tester has written the following requirements for the system:
