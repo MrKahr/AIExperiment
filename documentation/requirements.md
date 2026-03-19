@@ -52,66 +52,77 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 2. Users should be able to create DnD session in system
 3. Users should be able to register for DnD session
 4. Users should be able to see their registrations
-5. When two users are registerd for the same session, they should be to see other users' mail and screen names
+5. When two users are registerd for the same session, they should be to see other users' screen names
 6. Admin users should be able to see list of all members in database
 7. Users should be able to see their character information e.g. name, level, items, class, spells and abilities
-8. User should be able to export their data to formats pdf, docx or excel
+8. User should be able to export their data to formats pdf or csv
 9. Users should be able to roll virtual dice
 
 # Functional Requirements (FR)
 ## Interface requirements (IR)
-    1. While a user is not logged in, system page "my profile" shall provide user with window with fields 
+1. While a user is not logged in, system page "my profile" shall provide user with window with fields 
         - username (required)
         - email (required)
         - phone + country code 
         - password
-   
-    2. When a 
-    - When an authenticated user selects "my dashboard", system shall provide navigation options
-        - For users: 
-            - my profile
-            - my characters
-            - my sessions
-            - host session
-            - dice roller 
-        - For admins (addtionally)
-            - member info 
-    Each option shall open corresponding page. 
-     - When an authenticated user selects "my sessions", system shall display
-        - list of sessions 
-        - time + date + location of session
-        - host user name 
-        in separate window
-    - When an authenticated user selects "my character", system shall display 
-        - character name 
-        - character level + xp
-        - character items 
-        - character gold 
-        - character portrait 
-- While an authenticated user is logged in, system shall provide navigational elements between pages:
+2. When an authenticated user selects "my dashboard", system shall provide navigation options
+    - For users: 
+        - my profile
+        - my characters
+        - my sessions
+        - host session
+        - dice roller 
+    - For admins (addtionally)
+        - member info 
+Each option shall open corresponding page. 
+3. When an authenticated user selects "create session", the system shall open a window with a form that contains details
+    - start and end date
+    - host
+    - location 
+    - contact email
+4. When an authenticated user selects "my sessions", system shall display
+    - list of sessions 
+    - time + date + location of session
+    - host user name 
+    - users signed up for session
+    in separate windows
+5. When a user with flag admin = 1, selects member info, system shall display window with information 
+    - name 
+    - email
+    - active membership (0/1)
+6. When an authenticated user selects "my character", system shall display 
+    - character name 
+    - character level + xp
+    - character items 
+    - character gold 
+    - character portrait 
+7. While an authenticated user is logged in, system shall provide navigational elements between pages:
     - landing page
     - events page
     - about us page
     - my profile
-- When an authenticated user selects "dice roller", the system shall display options 
+8. When user selects "export character", system should display window with drop down menu to select formats
+    - pdf
+    - csv
+9. When an authenticated user selects "dice roller", the system shall display options 
     - dice type (d4,d6,d8,d12,d20,d100)
     - dice amount (1-100)
     - roll
 
 ## Data and data representation 
- 1. System shall validate each field in sign-up form with regex patterns server side with criteria for each field
-        - username 
-            - no longer than 16 chars
-            - no spaces
-        - email
-            - at least one @
-            - at least 1 char before and after @
-            - must end in suffix .[dk, com, org]
-        - password 
-            - at least 8 character
-            - one special character
-            - one uppercase character
-2. When an account or event is created, the following fields are checked for duplicates in the database 
+1. System shall validate each field in sign-up form with regex patterns server side with criteria for each field
+    - username 
+        - no longer than 16 chars
+        - no spaces
+    - email
+        - at least one @
+        - at least 1 char before and after @
+        - must end in suffix .[dk, com, org]
+    - password 
+        - at least 8 character
+        - one special character
+        - one uppercase character
+2. When an account is created, system shall examine fields are checked for duplicates in the database 
     - username 
     - email
     If system finds duplicate, system shall "error" operation and user shall be provided with error window containing plaintext message: "System error: cannot create account, please enter new details" 
@@ -119,7 +130,7 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
     - joined date
     - username
     - role flag
-- When user selects "my characters", system shall show window with character information 
+4. When user selects "my characters", system shall show window with character information 
     - Name 
     - Portrait 
     - Class
@@ -127,7 +138,7 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
     - items 
 
 ## Security
-1. System shall assign the first user to register in system the flag of admin (1)
+1. System shall assign the first user to register in system the flag of admin 
 2. When a user registers any besides the first user, system shall assign lowest level access flag to that user. 
 3. When system assigns and accesses flag, it shall assign the levels
     - user: 0/1
@@ -135,53 +146,67 @@ As a host, I want to create, plan and host interesting DnD sessions for fellow m
 - System shall allow admin user to perform "change role" operation on authenticated users with option in dashboard 
     - demote to user 
     - promote to admin
-- System shall p
 - System shall provide admin with option 
 - System shall only provide admins with view of user name, membership status (active/inactive), date joined.
 
 # Nonfunctional Requirements (NFR)
 ## Interface Requirements 
-- System interface shall be rated more than 3 by 50% of user on "ease of use" scale (5 point scale).
-- System shall be accessible to colorblind users (e.g. by providing a colorblind mode)
+1. System interface shall be rated more than 3 by 50% of user on "ease of use" scale (5 point scale).
+2. System shall be accessible to colorblind users (e.g. by providing a colorblind mode)
 
 ## Performance Requirements
-- System database shall allow at least 10k records
-- System shall allow at least 1k user to be loggin in simultanously
-- System database schema shall have reduced redundancy (BCNF or 3NF forms if possible)
-- System shall not take more than 2 seconds to perform registration operation for new users
-- System uptime over a week shall be at least 95% 
+1. System shall not take more than 2 seconds to perform registration operation for new users
+2. System uptime day selected as test day shall be at least 95% 
+3. System database shall allow at least 10k records
+4. System shall allow at least 1k user to be loggin in simultanously
+5. System database schema shall have reduced redundancy (BCNF or 3NF forms if possible)
+
 
 ## Security Requirements 
-- System shall authenticate users using an authentication algorithm 
-- Application should store user passwords using an encryption algorithm
-- System shall not allow admins to see other user passwords
-- System shall not allow users to see admin dashboard
+1. System shall authenticate users using an authentication algorithm 
+2. Application should store user passwords using an encryption algorithm
+3. System shall not allow admins to see other user passwords
+4. System shall not allow users to see admin dashboard
 
 ## Legal requirements
-- System shall comply with GDPR e.g. by deleting non-member profiles in database after 6 months
-- While a user has not ticked consent box, the system shall not perform the register operation
+1. System shall comply with GDPR e.g. by deleting non-member profiles in database after 6 months
+2. While a user has not ticked consent box, the system shall not perform the register operation
+
+## Reliability 
+1. System shall not lose database records when server is turned off 
+2. System shall perform automated database backup every 24 hours
+3. System shall be able to restore system state to backuped image within 24 hours
 
 ## Design and Implementation Constraints
-- System shall be implemented with typescript, node and mySQL
+1. System shall be implemented with typescript, node and mySQL
+2. System shall be available on browers 
+    - chrome 
+    - edge
+3. System shall be available on devices
+    - PC
+    - mobile
 
 ## Quality Assurance Requirements
-- System shall not lose database records when server is turned off 
-- System shall perform automated database backup every 24 hours
-- System shall be tested on all critical functions
-- System shall be tested using unit testing 
-- System shall be tested using integration testing 
-- System shall be tested using system testing 
-- System shall be tested using integration testing 
-- System shall be tested using automated testing
+1. System shall be tested on all critical functions as selected by stakeholders and development team
+2. System shall be tested using unit testing 
+3. System shall be tested using integration testing 
+4. System shall be tested using system testing 
+5. System shall be tested using integration testing 
+6. System shall be tested using automated testing
 
 ## Documentation Requirements
-- System shall provide documentation on critical functions
-- When system provides documentation on functions, classes or object, these must be documented with at least the purpose of the code, and the meaning of any parameters or fields. 
+1. System shall provide documentation on critical functions
+2. When system provides documentation on functions, classes or object, these must be documented with at the purpose of the code, and the meaning of any parameters or fields. 
 
 ### TODO: 
 - Create nice value chain picture [Value Chain section](#value-chain)
 - Use system design book to provide illustrations for system operations
+- Put all of these requirements in a depdency graph 
 
 ### TIPS learned 
 - Always refine business and user requirements first - that will make it way easier to define requirements later
 - All system requirements should follow from user + business requirements. It is easiest to just iterate through those first to ensure good coverage in the first requirement specification
+- It is very useful to have some sort of graph/software to keep track of 
+    1. How requirements are connected 
+    2. How requirements have changed 
+    3. What priority requirements are
