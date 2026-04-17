@@ -164,9 +164,8 @@ Each option shall open corresponding page.
 
 ## Security Requirements 
 1. System shall authenticate users using an authentication algorithm 
-2. Application should store user passwords using an encryption algorithm
-3. System shall not allow admins to see other user passwords
-4. System shall not allow users to see admin dashboard
+2. Application shall store user passwords using an hashing algorithm
+3. System shall not allow users to see admin dashboard
 
 ## Legal requirements
 1. System shall comply with GDPR e.g. by deleting non-member profiles in database after 6 months
@@ -199,6 +198,9 @@ Each option shall open corresponding page.
 2. When system provides documentation on functions, classes or object, these must be documented with at the purpose of the code, and the meaning of any parameters or fields. 
 
 ### TODO: 
+1. needs to have all necessary operations 
+2. needs to be testable and not vague
+3. needs to have tracability
 - Create nice value chain picture [Value Chain section](#value-chain)
 - Use system design book to provide illustrations for system operations
 - Put all of these requirements in a depdency graph 
@@ -210,3 +212,5 @@ Each option shall open corresponding page.
     1. How requirements are connected 
     2. How requirements have changed 
     3. What priority requirements are
+
+
