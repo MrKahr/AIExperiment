@@ -1,7 +1,8 @@
 # AI vs RS - A game of cat and mouse between me and github copilot (or some AI-agent)
 This repo is a cat and mouse game between me and github co-pilot. \
 The goal of the AI is to write a simple web-based application for booking dungeons and dragons sessions.\
-My goal is to come up with a list of requirements, as well as a test strategy and to properly write and test the system to find as many bugs as I can! 
+
+My goal is to come up with a list of requirements, a test strategy and to implement this strategy to find as many bugs as I can! 
 
 ## Rules for this project 
 - I cannot write any source code for the application; it should be completed by an AI. This will simulate me being handed some codebase to test from a developer team.
