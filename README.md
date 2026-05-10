@@ -12,7 +12,7 @@ To provide addtional transparency and increase my learning, I have set the follo
 - I shall explicitly state which testing strategies are used
 
 ## Resources
-These are the articles, papers, and technical reports that I have to use in this project.
+These are the articles, papers, and technical reports that I have used in creating this project.
 - [Harvard guide on prompting](https://www.huit.harvard.edu/news/ai-prompts)
 - [IEEE guide to requirement specification](https://www.computer.org/resources/software-requirements-specifications?source=resources)software-requirements-specifications#requirements-fundamentals
 - [Testability review paper1](https://dl.acm.org/doi/epdf/10.1145/2851613.2851978)
@@ -22,7 +22,7 @@ These are the articles, papers, and technical reports that I have to use in this
 ## Subsystem
 This project contains a minimal system test in the subsystem_example folder.
 
-The purpose for this inclusion, is to showcase the features of the main project succiently in an systematic manner, as well as provide me with a place to experiment with testing strategy. 
+The purpose of this folder, is to showcase the features of the main project in a succiently and systematic manner, as well as provide me with a place to experiment with testing strategy. 
 
 ## Tasks completed
 - [x] Prompt for Github Copilot
