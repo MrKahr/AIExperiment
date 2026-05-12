@@ -16,4 +16,4 @@ Your stack has already been determined by DS. You should use typescript as your 
 
 # The current task
 You should a web-based appllication that allows users to register, and log in to use the dicerolling tool. It should satisfy the requirements set up by the tester. You are allowed to spend 20 minutes planning the architecture, optimizing your code and writing a readme how to run, build and setup a development environment for this app. Do not create any sort of testing, CI/CD pipeline. This task will be performed by the tester. Before you start your planning, you must spend at least 1 minute thoroughly reading the requirements specified in 
-[The requirements file](requirements)
+[The requirements file](requirements). 
