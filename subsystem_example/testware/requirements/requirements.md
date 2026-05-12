@@ -35,18 +35,33 @@ The purpose of this web-based system is allow registered members of DS to perfor
 
 
 ## User stories/cases
-### Case 1: Admin 
+## User Requirements (UR) - Prioritized
+0. Users can register accounts with mandatory profile data: mail, name and password.
+1. Registered users can gain authenticated status by entering name and password into login screen.
+2. Authenticated users may simulate rolls and view name and mail of other users. 
+3. Users can simulate dice rolling of n-sided die with $n \in N$ (at least d4,d6,d8,d10,d12,d20,d100).
+4. Admins can ban users preventing them from accessing features that requires user authentication.
+5. Admins can view any users dice roll history. 
+6. Admins can unban user restoring their access to features that require authentication.
+7. Admins can search database for user by entering name, or mail
 
-### Case 2: Member rollathon
+### Case 1: I want to join DS - UR [0,1]
+I have been refered to join DS by a friend of mine. I want to register to their web-based tool to be able to roll dice to perform actions in our shared story in our Dungeons game. I have a good foundational knowledge of how to use web-based applications, I can navigate the a website using the navigation bar and expect the registration process to be similar to other web-based apps (e.g. DnD beyond)
 
-### Case 3: Member verification of dice rolls
+### Case 2: I want to -  UR [2,3]
+I have registered my account and I want to use the system to roll dice during my DnD games. 
 
-## Functional requirements
-## Non-functional requirements
-### Data model 
+### Case 2: UR (4,6)
 
+### Case 3: UR (5,7)
+
+## Functional requirements - Place in table
+## Non-functional requirements - Place in table
 
 # Acceptance Criteria
+## Dice rolling 
+## Member management 
+## 
 
 ## Future features
 - View probability distributions of N dice of type Y
